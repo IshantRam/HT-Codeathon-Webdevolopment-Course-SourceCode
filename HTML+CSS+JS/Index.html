@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        font-family: Sofia Pro;
+        font-weight: 300;
+      }
+      body,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+      p,
+      li,
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: darkslategrey;
+      }
+      body {
+        background-color: azure;
+      }
+      .wrapper {
+        width: 96%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2%;
+      }
+      /*Header Section*/
+      header {
+        background-color: papayawhip;
+        padding: 10px 0;
+      }
+      .logo {
+        margin: 0;
+
+        background: url(logo.png);
+        background-size: 70px 70px;
+        float: left;
+        width: 70px;
+        height: 70px;
+      }
+      header:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      header nav {
+        float: right;
+      }
+
+      header nav li {
+        list-style-type: none;
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+      header nav li a {
+        text-decoration: none;
+        color: darkslategrey;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+      /*Greet Section*/
+      .greet {
+        background-color: papayawhip;
+        font-family: fantasy;
+        font-size: 25px;
+        color: white;
+        padding-top: 50px;
+        padding-bottom: 45px;
+        text-align: center;
+        border: 5px solid black;
+        border-radius: 50px;
+      }
+      /*Banner Section*/
+      #main-banner {
+        width: 100%;
+        max-height: 500px;
+        overflow: hidden;
+      }
+      #main-banner img {
+        width: 100%;
+      }
+      #slider {
+        overflow: hidden;
+      }
+      #slides {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 18s slidy infinite;
+      }
+      #slides img {
+        width: 20%;
+        float: left;
+      }
+      #usp {
+        margin-top: 60px;
+      }
+      /*UPS Section*/
+      #usp li {
+        float: left;
+        width: 23%;
+        padding: 1%;
+        text-align: center;
+        list-style-type: none;
+      }
+      #usp li img {
+        height: 80px;
+        padding: 20px;
+        background-color: coral;
+        border-radius: 50%;
+      }
+      #usp li h2 {
+        font-size: 16px;
+        font-weight: 400;
+      }
+      #usp:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      /*Products Section*/
+      #products {
+        padding-top: 30px;
+        margin-top: 30px;
+        border-top: 2px solid lightgrey;
+      }
+      #products li {
+        float: left;
+        width: 32%;
+        list-style-type: none;
+        text-align: center;
+      }
+      #products li img {
+        width: 100%;
+      }
+      #products li:nth-child(even) {
+        margin: 0 1%;
+      }
+      #products:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #our-products {
+        text-align: center;
+      }
+      /*Footer Section*/
+      footer {
+        width: 100%;
+        background-color: darkslategrey;
+        padding: 30px 0;
+        margin-top: 60px;
+      }
+      footer ul {
+        float: left;
+        width: 48%;
+        margin: 1%;
+      }
+      footer ul h3 {
+        font-size: 30px;
+        color: azure;
+      }
+      footer ul li {
+        list-style-type: none;
+        font-size: 15px;
+        color: azure;
+      }
+      footer:after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+
+      /* Animation */
+      @keyframes slidy {
+        0% {
+          left: 0%;
+        }
+        28% {
+          left: 0%;
+        }
+        33% {
+          left: -100%;
+        }
+        61% {
+          left: -100%;
+        }
+        66% {
+          left: -200%;
+        }
+        94% {
+          left: -200%;
+        }
+        100% {
+          left: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body onload="Greet()">
+    <!-- Header Starts -->
+    <header>
+      <div class="wrapper">
+        <div class="logo"></div>
+        <nav>
+          <div class="menu"></div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Header Ends -->
+
+    <!--Greeting Section-->
+    <div class="greet">
+      <p id="namesec"></p>
+    </div>
+    <!--Greeting Section Ends-->
+
+    <!-- Banner Starts -->
+    <div id="main-banner">
+      <div id="slider">
+        <div id="slides">
+          <img src="Banner.jpg" alt="banner" />
+          <img src="Banner-2.jpg" alt="banner" />
+          <img src="Banner-3.jpg" alt="banner" />
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends -->
+
+    <!-- USP Section starts -->
+    <div class="wrapper">
+      <section id="usp">
+        <ul>
+          <li>
+            <img src="usp-1.png" />
+            <h2>Wide Range of Products</h2>
+          </li>
+          <li>
+            <img src="usp-2.png" />
+            <h2>Multiple Stores</h2>
+          </li>
+          <li>
+            <img src="usp-3.png" />
+
+            <h2>Happy Customers</h2>
+          </li>
+          <li>
+            <img src="usp-4.png" />
+            <h2>Satisfation Guaranteed</h2>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- USP Section Ends -->
+
+    <!-- Product Starts -->
+    <div class="wrapper">
+      <section id="products">
+        <h2 id="our-products">Our Products</h2>
+        <ul>
+          <li>
+            <img src="acoustic-guitar.jpg" />
+            <h2>Acoustic Guitar</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus
+              eros ac magna finibus aliquet. In hac habitasse platea dictumst.
+              Donec ac nunc quis diam elementum fringilla.
+            </p>
+          </li>
+          <li>
+            <img src="drums.jpg" />
+            <h2>Drums</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus
+              eros ac magna finibus aliquet. In hac habitasse platea dictumst.
+              Donec ac nunc quis diam elementum fringilla.
+            </p>
+          </li>
+          <li>
+            <img src="violin.jpg" />
+            <h2>Violin</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus
+              eros ac magna finibus aliquet. In hac habitasse platea dictumst.
+              Donec ac nunc quis diam elementum fringilla.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- Product Ends -->
+
+    <!--Footer Starts-->
+    <footer>
+      <div class="wrapper">
+        <ul>
+          <h3>Get in Touch</h3>
+          <li>Manny's Music Shop - Delhi, India</li>
+          <li>Address: ABC Avenue, 123-321</li>
+          <li>Call Today - +91 98765 43210</li>
+        </ul>
+        <ul>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/YNZCciWx8_8"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </ul>
+      </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <!--JavaScript Greet Function-->
+    <script type="text/javascript">
+      function Greet() {
+        var name = prompt("Hello User, What is your name?");
+        var bg = prompt("What is your favourite color", "Green");
+        var msg;
+        var date = new Date();
+        var hour = date.getHours();
+        if (hour < 12) {
+          msg = "Hello " + name + " Good Morning";
+          document.getElementById("namesec").innerHTML = msg;
+        } else if (hour > 12 && hour < 16) {
+          msg = "Hello " + name + " Good Afternoon";
+          document.getElementById("namesec").innerHTML = msg;
+        } else if (hour > 16 && hour < 23) {
+          msg = "Hello " + name + " Good Evening";
+          document.getElementById("namesec").innerHTML = msg;
+        } else {
+          msg = "Greeting of The Day";
+          document.getElementById("namesec").innerHTML = msg;
+          
+          document.body.style.backgroundColor = bg;
+        }
+      }
+    </script>
+  </body>
+</html>
